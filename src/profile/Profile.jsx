@@ -1,4 +1,5 @@
 import React from 'react'
+import {PropTypes} from 'prop-types'
 
 const Profile = ({fullName ,age ,bio, children, handleClick}) => {
   return (
@@ -11,6 +12,13 @@ const Profile = ({fullName ,age ,bio, children, handleClick}) => {
         <button style={{width:'100px',height:'40px', backgroundColor:'#094679',marginLeft:'300px'}} onClick={handleClick}>Click Me !!> </button>
     </div>
   )
+}
+Profile.defaultProps = {
+  address: "Bou Salem"
+}
+
+Profile.propTypes={
+  age : PropTypes.number
 }
 
 export default Profile
